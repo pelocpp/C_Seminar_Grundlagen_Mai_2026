@@ -2,7 +2,54 @@
 // standard input output
 
 // Einsprungpunkt // entry point
-void main()
+void main_for()
+{
+    // for
+
+    // One Statement in One line
+
+    for (int i = 0; i < 10; i++)
+    {
+        // anweisungen();
+        printf("Schleife: %d\n", i);
+    }
+
+   // printf("Danach: %d\n", i);
+}
+
+void main_while()
+{
+    // while
+
+    int a = 0;  
+    int b = 10;
+
+
+    int wieOftContinue = 0;
+
+    while (a < b)
+    {
+        // ACHTUNG: Der Wert 5 für a steht für einen Fehler im Ablauf !!!
+        //    Es soll mit dem nächsten gültigen Wert weiter gearbeitet werden
+
+        if (a == 5) {  // VERGLEICH: Achtung: einfaches = ist Wertzuweisung
+            // break;
+
+            // a = a + 1;
+            a++;
+            continue;
+        }
+
+        printf(">>> a = %d - b = %d \n", a, b);
+
+        a = a + 1;
+    }
+
+    printf("Fertig\n");
+}
+
+
+void main_while_mit_break()
 {
     // while
 

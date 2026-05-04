@@ -430,12 +430,138 @@ if (  n % 2 == 0 )   // ist gerade    // Modulo-Operator
 
 Guter Startwert: n = 7  oder n = 27
 
-15:25
-=====
+=================================================================
+
+== Fragen nach Strukturierung:  Unterprogramme
+
+== Einlesen von der Konsole
+
+   'scanf': This function or variable may be unsafe.
+   Consider using scanf_s instead.   // scanf_s  ==> secure
+   To disable deprecation, use _CRT_SECURE_NO_WARNINGS.
+   See online help for details.
+
+== break und continue
+
+== for-Schleife
+
+=============================================================
+
+ a = a + 1;
+
+ Man hat hierfür eine Abkürzung:
+
+ a ++;   // Zähle 1 auf a dazu
+
+ a --;   // Ziehe 1 von a ab
 
 
+Coding Style Guides
+
+============================================================
+
+Restriktion: Hmmmmmmmm ... eher nicht.
+
+  Man sollte von einer Sprache alles verwenden dürfen, was sie kann.
+
+Stopp: Embedded // dynamischer Speicher: Beispiel: Darf NICHT verwendet werden.
+
+Ästhetik // Lesbarkeit:
+
+Coding Style Guides
+
+https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#gconstants
+
+https://github.com/MaJerle/c-code-style
+
+Das gibt es auch für Unit Testing
+
+https://www.geeksforgeeks.org/software-testing/a-comprehensive-guide-to-unit-testing-in-c/
+
+Beispiel:
+
+"Tool für globale Variablen"
+
+Harte Maßnahme: 
+
+int counter;
+
+// counter = 500
+
+Lösung: 
+
+Man könnte den Zugriff auf globale Variablen in Funktionen verstecken / unterbringen:
+
+Regel // Richtlinie:  Die vom Team definiert / und Team umgesetzt werden müssen.
+
+Dennis Ritchie:
+
+C:  Vision:
+
+"A Programmer knows what he does"   :)
+
+Liberale Sprache 
 
 
+====================================================
 
+for-Schleife:
 
+Ist wie die while-Schleife eine Wiederholungs-Anweisung
+
+Ästhetik:
+
+while:   ==> Charakter einer Wiederholung in Bezug auf eine Bedingung
+
+for:     ==> Charakter einer Wiederholung in Bezug auf eine bestimmte Anzahl von Wiederholungen (10 Mal, 100 Mal)
+
+SYNTAX:
+
+for ( TEIL_1  ; TEIL_2 ;  TEIL_3 )
+{
+    anweisungen();
+}
+
+TEIL_1: Definiert und belegt eine Zählervariable für die Anzahl der Wiederholungen
+
+TEIL_2: Bedingung, die die Ausführung des Rumpfs (Body) kontrolliert
+
+TEIL_3: Die Zählervariable ist zu verändern
+
+//  Vereinbarung  // Bedingung // Anweisung
+
+for ( int i = 0 ;  i < 10  ;  i = i + 1 )
+{
+    anweisungen();
+}
+
+Emfehlung: Normalerweise "i" in der for-Schleife definieren.
+
+================================================================
+
+double capital = 1000.0;   // Euros
+double interest = 4.0;    // interest = Zinsen auf deutsch
+
+Um wieviel vergrossert sich mein Kapital im Laufe von 10 Jahren,
+wenn ich bei einem Startkapital von 1000.0 Euro 4.0 % Zinsen erhalte
+und diese zum Kapital dazufüge // Zinses-Zins:
+
+1. Jahr: 1040.- 
+2. Jahr: 1085.-  nicht exakt.
+
+for-Schleife
+ 
+   Format für double:    %.2f
+
+================================================================
+
+Für Dienstag:  eine int-Variable auf einen double addieren
+
+   Typ Konvertierung.
+
+Zu langsam
+Zu schnell
+ist okay
+
+== Besprechung der Musterlösung
 
