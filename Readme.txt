@@ -261,3 +261,130 @@ C  Lexikon:   Wörter (n, m, f , d):   123.123
    Jeder Konstanten ist ein Datentyp zugeordnet: float oder double: Festlegung: double
 
 ===================================================================
+
+Klassisches C // 50 Jahren
+
+Aktuelles C
+
+Neuen Datentyp:    size_t  Maschinenabhängigkeit 16 Bit / 32 Bit  : 
+
+'size_t' ist wie int, long: ganze Zahl  // Ist so groß wie der Akku der aktuellen Maschinen.
+
+===================================================================
+
+Abarbeitung eines C-Programms:
+
+Die Anweisungen werden DER REIHE NACH ausgeführt, von oben nach unten.
+
+Kontrollstrukturen: if, while, for, ...
+
+Diese ermöglichen Abweichungen von dieser Reihenfolgen.
+
+if:   Anweisung : Bedingungsanweisung
+
+while:  Anweisung : Wiederholungsanweisung
+
+SYNTAX:
+
+if ( bedingung ) 
+{
+    anweisungen;
+}
+
+oder
+
+if ( bedingung ) 
+{
+    anweisungen;
+}
+else
+{
+    anweisungen;
+}
+
+oder
+
+if ( bedingung ) 
+{
+    anweisungen;
+}
+else if ( bedingung2 )
+{
+    anweisungen;
+}
+else if ( bedingung3 )
+{
+    anweisungen;
+}
+else
+{
+    anweisungen; // alle bedingungen von oben waren nicht erfüllt.
+}
+
+
+bedingung: Erfüllt oder nicht  // true, false :  NICHT in C
+
+false:  Wert 0
+true:   Alles andere ausser 0 // ungleich 0
+
+int a = 5;
+int b = 7;
+
+if (  a > b )    // Was ist das für ein Datentyp ...: int
+
+Womit wird einen Anweisung abgeschlossen:  Mit ;
+
+AUSNAHME: Nach einer } entfällt das ;
+
+====================================================
+
+Bedingungen:
+
+Logisches Und: Sind BEIDE Bedingungen erfüllt ???
+
+Operator:  &&
+
+Logisches Oder: Ist EINE von beiden Bedingunen erfüllt ???
+
+Operator:  ||
+
+Negation:  aus true mache false und aus false mache true
+
+Operator:  !
+
+
+Syntax bei a < b und && oder || war intuitiv.
+
+Bei ! ist die Schreibweise falsch !!!
+
+Warum:  Hmmm, es gibt aktuell mehrere Operatoren:
+
+Da müssen wir die Reihenfolge der Auswertung betrachten:
+
+Wie:  
+
+a) Mit runden Klammern
+b) Mit einer Tabelle, die uns dabei hilft: Operatoren Vorrang:
+
+https://en.cppreference.com/c/language/operator_precedence
+
+Beispiel:
+
+int a = 3 + (4 * 5)
+
+======================================================================
+
+while:  Anweisung:  Wiederholungs-Anweisung
+
+SYNTAX:
+
+while ( bedingung )
+{
+    statements;
+}
+
+Zusatz:
+
+Ein while kann auch vorzeitig -- oder auf eine zweite Weise -- verlassen werden:
+
+break;
