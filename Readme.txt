@@ -555,7 +555,11 @@ for-Schleife
 
 ================================================================
 
-Für Dienstag:  eine int-Variable auf einen double addieren
+
+== Besprechung der Musterlösung
+
+
+== Für Dienstag:  eine int-Variable auf einen double addieren
 
    Typ Konvertierung.
 
@@ -563,5 +567,6 @@ Zu langsam
 Zu schnell
 ist okay
 
-== Besprechung der Musterlösung
+== Unterprogramme
+
 
