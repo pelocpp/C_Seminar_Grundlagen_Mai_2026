@@ -388,3 +388,54 @@ Zusatz:
 Ein while kann auch vorzeitig -- oder auf eine zweite Weise -- verlassen werden:
 
 break;
+
+==============================================================================
+
+Erste Übung:
+
+Teuflische Folge   //  Collatz Folge 
+
+Zahlenfolge:
+
+Startwert:
+
+int n = 7;
+
+Nächste Wert:
+
+n gerade:    n / 2
+
+n ungerade:  3 * n + 1
+
+Probe:
+
+7 => 22 => 11 => 34 => 17 => 52 => 26 => 13 =>40 =>20 =>10 =>5 =>16 =>8 =>4 =>2 =>1   ENDE
+
+
+Für jeden Startwert endet diese Folge nach ENDLICH vielen Schritten.
+
+IMMER eine endliche Folge: 
+
+Programm:
+
+
+Die Werte einer teuflischen Folge in der Konsole ausgeben.
+
+Hinweis:
+
+if (  n ist gerade )
+
+if (  n % 2 == 0 )   // ist gerade    // Modulo-Operator
+
+
+Guter Startwert: n = 7  oder n = 27
+
+15:25
+=====
+
+
+
+
+
+
+
