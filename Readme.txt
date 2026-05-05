@@ -24,6 +24,27 @@ https://github.com/pelocpp/c_introduction
 
 ===================================
 
+Agenda Dienstag:
+----------------
+
+== Blick auf die Unterlagen
+
+== Besprechung der Musterlösung
+
+== eine int-Variable auf einen double addieren
+   allgemein: Typ Konvertierung
+
+== Unterprogramme
+
+== Speicherbereiche eines C–Programms
+
+== Lebensdauer von Variablen
+
+== Arrays
+
+===================================
+
+
 Organisatorisches:
 
 Link ab dem zweiten Tag:
@@ -554,19 +575,4 @@ for-Schleife
    Format für double:    %.2f
 
 ================================================================
-
-
-== Besprechung der Musterlösung
-
-
-== Für Dienstag:  eine int-Variable auf einen double addieren
-
-   Typ Konvertierung.
-
-Zu langsam
-Zu schnell
-ist okay
-
-== Unterprogramme
-
 
