@@ -874,5 +874,51 @@ C) Dynamische Daten:
 
 Werden bei BEDARF erzeugt ... und DANACH wieder freigegeben.
 
-15.25
------
+============================================================
+
+Strukturierung der Daten:
+
+== Einfachen, elementaren Variablen (int, float, ...)
+   Built-In Datentypen
+
+== Zusammengesetzte Daten:  Array, Feld
+
+Was ist ein Feld: 
+
+Viele Werte - DESSELBEN - Typs.
+
+Beispiel: 
+
+Lotto-Zahlen: 6 Werte vom Typ int
+
+Messreihe: 100 Werte vom Typ double
+
+SYNTAX:
+
+typ  nameFeld [ anzahl ];
+
+ACHTUNG: Die Länge ist FIx !!!!!!!!!!!!!!!!!!!!!!!!!
+
+Beispiel:
+
+int  lottoZahlen [ 6 ];
+
+LEIDER KONSTATIEREN:
+
+Indices werden von C während der Laufzeit NICHT auf Gültigkeit überprüft :(
+
+===> Performanz
+
+==========================================================================
+
+Übung:
+
+a) Ein Feld der Länge 10 mit Zufallszahlen vorbelegen, im Bereich von 1 bis 100
+b) Das Feld in der Konsole ausgeben
+c) Den kleinsten und grössten Wert bestimmen - und ausgeben.
+
+Zufallszahlen:
+
+Werden berechnet: Ohne Eingriff: Ist das immer diesselbe Zahlenfolge
+
+Mit Eingriff:    srand

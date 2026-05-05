@@ -39,6 +39,9 @@
     <ClCompile Include="LocalData.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />
