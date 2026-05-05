@@ -5,9 +5,12 @@
 // global functions
 extern void exercise_areaRectangle();
 extern void exercise_areaCircle();
-extern void exercise_Array();
+
 extern void demoGlobalData();
 extern void demoArray();
+
+
+extern void exercise_Array();
 
 extern void func1();
 extern void func2();

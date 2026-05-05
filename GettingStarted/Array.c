@@ -7,19 +7,19 @@
 
 #define MaxZahlen  6   // Kommentar
 
-#define MaxZahlenUebung  10 
+#define MaxZahlenUebung  10
 
 // globales Feld
-int g_einFeld[MaxZahlenUebung];
+static int g_einFeld[MaxZahlenUebung];
 
-void exercise_Array_Ausgeben()
+static void exercise_Array_Ausgeben()
 {
     for (int i = 0; i < MaxZahlenUebung; i++) {
         printf("%d: %d\n", i, g_einFeld[i]);
     }
 }
 
-void exercise_Array_Vorbelegen()
+static void exercise_Array_Vorbelegen()
 {
     // srand(123);
 
@@ -39,14 +39,14 @@ void exercise_Array_Vorbelegen()
 }
 
 // To be done
-int exercise_Array_Minimum()
+static int exercise_Array_Minimum()
 {
     // Minimum von g_einFeld
     return -1;
 }
 
 // To be done
-int exercise_Array_Maximum()
+static int exercise_Array_Maximum()
 {
     // Minimum von g_einFeld
     return -1;
