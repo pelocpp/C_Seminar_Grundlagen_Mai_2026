@@ -54,6 +54,11 @@ Agenda Mittwoch:
 
 == Besprechung Musterlösung
 
+== Genereller Aufbau
+   -- main / Unterprogramm / Ablauf
+   -- Daten / Strukturierung
+   -- Header-Files
+
 == Zeiger und Pointer
 
 == Beispiel Parameterübergabe
