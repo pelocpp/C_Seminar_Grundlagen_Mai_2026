@@ -706,5 +706,75 @@ NICHT: Zeichenketten: "ABCDE", Adressen, Strukturen , Unions
 
 Unterprogramme
 
+Was ist ein Unterprogramm?
+
+== Zusammenfassung von Anweisungen unter einem Namen.
+== Über den Namen kann man das Unterprogramm aufrufen
+== Es können Werte an das Unterprogramm übergeben werden.
+== Es können Ergebnisse zurückgegeben werden.
+
+Grammatikalisch:  2 Varianten von Unterprogrammen
+
+Mit oder ohne Ergebnis.
+
+A) Unterprogramm ohne Ergebnis
+
+SYNTAX:
+
+void NameDesUnterprogramms ( optionale_parameter  )
+{
+    anweisungen;
+}
+
+Wie wird ein Parameter definiert?
+
+Wie eine Variable: Typ Name
+
+Aufruf:     NameDesUnterprogramms (...);
+
+
+B) Unterprogramm mit Ergebnis
+
+SYNTAX:
+
+typ NameDesUnterprogramms ( optionale_parameter  )
+{
+    typ result;
+
+    anweisungen;
+
+    return result;
+}
+
+Aufruf:     
+            Typ ergebnis;
+            ergebnis = NameDesUnterprogramms (...);
+
+==========================================================
+
+Viele Fragen offen:
+
+Wo liegen Parameter im Speicher
+Wo liegen die Variablen generell im Speicher
+Welche Speicherbereiche gibt 
+
+Architektur von C / eines C Programms:     Laufzeit
+
+==========================================================
+
+
+Schreibe folgende Unterprogramme:
+
+
+float areaRectangle (float width, float height)
+
+float areaCircle (float radius)            // Pi * radius * radius
+
+Hilfe:  
+
+double Pi = 3.14;
+
+Ausgabe des Ergebnisses in der Konsole anschauen
+Werte an das Unterprogramm können im Programm direkt stehen oder von der Konsole eingegeben werden
 
 

@@ -24,6 +24,9 @@
     <ClCompile Include="Aufgabe_02_ZinsesZins.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Unterprogramme.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />

@@ -4,7 +4,7 @@
 
 // Typ Konvertierung
 
-void main()
+void main_type_conversion_initialization()
 {
     int n = 100;
 
