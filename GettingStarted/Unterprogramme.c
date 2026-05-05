@@ -53,7 +53,7 @@ float genericProductFloat()
 }
 
 
-void main()
+void main_unterprogramme()
 {
     int wieOft = 3;
 
