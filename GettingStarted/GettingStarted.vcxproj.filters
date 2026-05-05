@@ -21,7 +21,7 @@
     <ClCompile Include="Aufgabe_01_Teuflische_Folge.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Aufgabe_02_ZinsesZins.cpp">
+    <ClCompile Include="Aufgabe_02_ZinsesZins.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,6 +1,43 @@
 #include "stdio.h"   // Hier wird eine Bibliothek eingezogen // printf
 // standard input output
 
+
+// Typ Konvertierung
+
+void main()
+{
+    int n = 100;
+
+    double d = 100.0;   // I wouldn't do this
+
+    int i = 1;
+
+    long long l = 2;
+
+    l = i;
+}
+
+void main_type_conversion ()
+{
+    int a = 1;
+    int b = 2;
+
+    double d = 100.7;
+    double f = 200.0;
+
+    a = b + 100;  // 102: int
+
+ //   d = a;  // auch: implizite Typkonvertierung OHNE Verlust
+
+    // implizit, mit Warning
+    a = d;  // warning C4244: '=': conversion from 'double' to 'int', possible loss of data // 
+            // wird abgeschnitten // truncation  // implizite Typkonvertierung MIT Verlust
+
+    // Ich bin mir der Typkonvertierung bewusst: ich will diese haben
+    a = (int) d;
+}
+
+
 // Einsprungpunkt // entry point
 void main_for()
 {

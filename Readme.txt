@@ -31,10 +31,14 @@ Agenda Dienstag:
 
 == Besprechung der Musterlösung
 
+== Präprozessor
+
 == eine int-Variable auf einen double addieren
    allgemein: Typ Konvertierung
 
 == Unterprogramme
+
+== Strukturierung eines C-Programms (mehrere Dateien)
 
 == Speicherbereiche eines C–Programms
 
@@ -575,4 +579,132 @@ for-Schleife
    Format für double:    %.2f
 
 ================================================================
+
+Übersetzer:
+
+Liest von Oben bis unten:  EINMAL  - One Pass Compiler
+
+
+C#, Java: Two Pass Compiler
+
+====================================================================
+
+
+Frage:
+
+"Vererbung des Datentyps"
+
+    double startCapitalStock = capitalStock;
+
+    double startCapitalStock;   
+
+Antwort:
+
+Grammatik: Vereinbarung // Name und Typ einer Variablen vereinbart: startCapitalStock
+
+Grammatik: 2. Feature: Vorbelegung // Initialisierung:
+
+Belegt die Variable mit einem Wert vor: Dieser Wert muss TYPKONFORM zum Typ der Variablen sein.
+
+-----------------------------------
+
+Python:   n = 123     // n ist typlos    // Zuweisung passiert zur Laufzeit // Referenz
+          n = "ABC"   // Werte sind von den Variablen "getrennt"
+
+-----------------------------------
+
+
+
+===============================================================
+
+Typkonvertierung:
+
+= Variablenvereinbarung
+
+= Zuweisung (von Variablen)
+
+--------------------------------
+
+Zuweisung (von Variablen)
+
+Es wird der Wert auf der rechten Seite der Variablen auf der linken Seite zugewiesen;
+Die Datentypen müssen - prinzipiell - IDENTISCH sein.
+
+---------------------------------
+
+1. Ausnahme:
+
+Ist der Wert auf der rechten Seite - ohne VERLUST - in die Variable auf der linken Seite 
+kopierbar, dann akzeptiert C diese Zuweisung.
+
+Zuweisung OHNE Informationsverlust GEHT.
+
+ACHTUNG: 
+
+CVTSI2SD — Convert Doubleword Integer to Scalar Double Precision Floating-Point Value
+          // LANGSAM
+
+--------------------------------
+
+2. Ausnahme:
+
+Was ist, wenn es einen Informationsverlust gibt / geben kann.
+
+Dann geht die Zuweisung auch - ggf. mit einem Informationsverlust 
+                             - ggf. mit einem geänderten // gerundeten Wert
+
+    ===> implizite Typkonvertierung  // Regelfall: WARNING markiert
+
+Beispiel zu implizite Typkonvertierung OHNE Verlust:
+
+    int a = 1;           // Zweierkomplements
+    int b = 2;
+
+    double d = 100.7;   // IEEE  - Mantisse, Vor, Nachkommastellen
+    double f = 200.0;
+
+    d = a;  // auch: implizite Typkonvertierung OHNE Verlust
+
+        d = a;  // auch: implizite Typkonvertierung OHNE Verlust
+00007FF6DAE41EDD  cvtsi2sd    xmm0,dword ptr [a]    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+00007FF6DAE41EE2  movsd       mmword ptr [d],xmm0    // schnell, weil eine mov-Variante
+
+CVTSI2SD — Convert Doubleword Integer to Scalar Double Precision Floating-Point Value
+          // LANGSAM
+
+-------------------------------------------------------------
+
+Neben der implizite Typkonvertierung: Alternative
+
+Explizite Typkonvertierung:   Sprachliches Mittel: Typumwandlung // cast
+
+SYNTAX:
+
+var_a = ( typ von var_a ) var_b;
+
+    // implizit, mit Warning   // Bad Smell // Geruch 
+    a = d;  // warning C4244: '=': conversion from 'double' to 'int', possible loss of data // 
+00007FF7A92B1EDD  cvttsd2si   eax,mmword ptr [d]  
+00007FF7A92B1EE2  mov         dword ptr [a],eax  
+
+    // Ich bin mir der Typkonvertierung bewusst: ich will diese haben
+    a = (int) d;
+00007FF7A92B1EE5  cvttsd2si   eax,mmword ptr [d]  
+00007FF7A92B1EEA  mov         dword ptr [a],eax  
+
+Frage:
+
+Es gibt eine Familie von Datentypen, die auf diese Weise konvertierbar sind:
+
+char, short, int, long, long long, size_t, float, double   // elementaren Datentypen
+
+Char: Zeichen: Da gelten eigene Regeln.
+
+NICHT: Zeichenketten: "ABCDE", Adressen, Strukturen , Unions 
+
+====================================================================
+
+Unterprogramme
+
+
 
