@@ -7,58 +7,6 @@
 
 #define MaxZahlen  6   // Kommentar
 
-#define MaxZahlenUebung  10
-
-// globales Feld
-static int g_einFeld[MaxZahlenUebung];
-
-static void exercise_Array_Ausgeben()
-{
-    for (int i = 0; i < MaxZahlenUebung; i++) {
-        printf("%d: %d\n", i, g_einFeld[i]);
-    }
-}
-
-static void exercise_Array_Vorbelegen()
-{
-    // srand(123);
-
-    // Trick für ECHTE Zufallszahlen
-    srand(time(NULL));
-
-    // Mit Zufallszahlen:  rand
-    //int zufall = rand();
-    //printf("Zufall: %d\n", zufall);
-
-    //zufall = rand();
-    //printf("Zufall: %d\n", zufall);
-
-    for (int i = 0; i < MaxZahlenUebung; i++) {
-        g_einFeld[i] = rand() % 100 + 1;
-    }
-}
-
-// To be done
-static int exercise_Array_Minimum()
-{
-    // Minimum von g_einFeld
-    return -1;
-}
-
-// To be done
-static int exercise_Array_Maximum()
-{
-    // Minimum von g_einFeld
-    return -1;
-}
-
-void exercise_Array()
-{
-    exercise_Array_Ausgeben();
-    exercise_Array_Vorbelegen();
-    exercise_Array_Ausgeben();
-}
-
 void demoArray()
 {
     // Lotto

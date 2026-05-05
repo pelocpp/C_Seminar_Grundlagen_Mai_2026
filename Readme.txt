@@ -46,6 +46,49 @@ Agenda Dienstag:
 
 == Arrays
 
+
+===================================
+
+Agenda Mittwoch:
+----------------
+
+== Besprechung Musterlösung
+
+== Zeiger und Pointer
+
+== Beispiel Parameterübergabe
+
+== Dynamische Variablen
+
+== Struktur DynamicIntArray
+
+===================================
+
+Agenda Donnerstag:
+----------------
+
+== Besprechung Musterlösung
+
+== Zeichenketten
+
+== Aufgaben:  append, etc.
+
+== Aufgaben:  Aufgabe zur Zeichenkettenverarbeitung mit dynamisch allokiertem Speicher
+
+
+===================================
+
+Agenda Freitag:
+--------------
+
+== Strukturen
+
+== Aufgaben: Geldbeutel
+
+== Aufgaben: Telefonbuch
+
+
+
 ===================================
 
 

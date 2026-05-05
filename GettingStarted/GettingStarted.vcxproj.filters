@@ -42,6 +42,9 @@
     <ClCompile Include="Array.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Aufgabe_04_Array_Minimum_Maximum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />

@@ -13,9 +13,9 @@ static float areaRectangle(float w, float h)
     return result;
 }
 
-static float areaCircle(double radius)
+static float areaCircle(float radius)
 {
-    float area = 2 * 3.141592653589793 * radius;
+    float area = 2 * 3.141592653589793f * radius;
 
     return area;
 }
