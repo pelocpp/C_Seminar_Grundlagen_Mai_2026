@@ -778,3 +778,25 @@ Ausgabe des Ergebnisses in der Konsole anschauen
 Werte an das Unterprogramm können im Programm direkt stehen oder von der Konsole eingegeben werden
 
 
+============================================
+
+Wie wird ein Unterprogramm aufgerufen ??????
+
+Ein Hilfsmittel:  Speicherbereich:   Stapel // Stack
+
+Stapel: Man kann Variablen "drauf" legen ...
+oder von oben "entnehmen"
+
+Wie Bücher ----
+
+Darstellung aller Variablen eines Unterprogamms:  Fenster "Locals"
+
+Darstellung der aktuell aufgerufenen Unterprogramme:  Fenster "Call Stack" // Aufrufliste
+
+
+Was ist noch im Stackframe enthalten ???
+
+Steht zB auch die Rücksprungadresse:  Wo geht es jetzt weiter...
+Steht zB auch der alte Wert des SP im aktuellen Stackframe:
+
+
