@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 // Unterprogramm: Für beliebige Rechtecke
-float areaRectangle(float w, float h)
+static float areaRectangle(float w, float h)
 {
     float result = w * h;  // result ist auch eine Variable:
                                     // Hilfsvariable zum Rechnen
@@ -13,7 +13,7 @@ float areaRectangle(float w, float h)
     return result;
 }
 
-float areaCircle(double radius)
+static float areaCircle(double radius)
 {
     float area = 2 * 3.141592653589793 * radius;
 
@@ -48,14 +48,6 @@ void exercise_areaCircle()
     float area = areaCircle(radius);
 
     printf("Circle with radius %f has area %f.\n", radius, area);
-}
-
-
-    
-void main()
-{
-    exercise_areaRectangle();
-    exercise_areaCircle();
 }
 
 // =====================================================================================

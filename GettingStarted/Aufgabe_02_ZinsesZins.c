@@ -2,6 +2,8 @@
 // Zinsberechnung.c
 // =====================================================================================
 
+#include "MyFunctions.h"
+
 #include <stdio.h>
 
 // void main()

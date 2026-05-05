@@ -126,7 +126,10 @@
     <ClCompile Include="Aufgabe_01_Teuflische_Folge.c" />
     <ClCompile Include="Aufgabe_02_ZinsesZins.c" />
     <ClCompile Include="Aufgabe_03_Unterprogramme.c" />
+    <ClCompile Include="GlobalData.c" />
     <ClCompile Include="HelloWorld.c" />
+    <ClCompile Include="LocalData.c" />
+    <ClCompile Include="Program.c" />
     <ClCompile Include="Unterprogramme.c" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +137,10 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\01_Stack_Unterprogrammaufruf.png" />
+    <Image Include="..\02_Stackframe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

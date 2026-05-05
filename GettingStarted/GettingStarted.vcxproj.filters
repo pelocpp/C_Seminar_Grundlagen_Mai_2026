@@ -30,6 +30,15 @@
     <ClCompile Include="Aufgabe_03_Unterprogramme.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Program.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalData.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalData.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />
@@ -38,5 +47,13 @@
     <Image Include="..\01_Stack_Unterprogrammaufruf.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="..\02_Stackframe.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

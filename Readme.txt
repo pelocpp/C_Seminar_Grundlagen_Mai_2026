@@ -733,7 +733,7 @@ Wie eine Variable: Typ Name
 Aufruf:     NameDesUnterprogramms (...);
 
 
-B) Unterprogramm mit Ergebnis
+B) Unterprogramm mit Ergebnis:   Funktion
 
 SYNTAX:
 
@@ -749,6 +749,12 @@ typ NameDesUnterprogramms ( optionale_parameter  )
 Aufruf:     
             Typ ergebnis;
             ergebnis = NameDesUnterprogramms (...);
+
+
+Beispiel:   WurzelAus // SquareRoot  : Parameter: Von welchem Wert: Wurzel von 4 ist 2
+
+           Hmmm, wir wird das berechnet:  Das ist dann eine interner Algorithmus:
+                                          Sind dann lokale Variablen, die man zusätzlich benötigt.
 
 ==========================================================
 
@@ -799,4 +805,74 @@ Was ist noch im Stackframe enthalten ???
 Steht zB auch die Rücksprungadresse:  Wo geht es jetzt weiter...
 Steht zB auch der alte Wert des SP im aktuellen Stackframe:
 
+=========================================================================
 
+Deep Dive:  "Stackframe"
+
+========================================================================
+
+== Strukturierung eines C-Programms:
+
+-- Ein C-Programm besteht aus vielen Unterprogrammen (2 Facetten)
+-- Ein bestimmtes Unterprogramm (main) stellt den Start des Programms (Hauptprogramms) dar.
+
+-- Es gibt auch die Möglichkeiten der Strukturierung von Daten.
+
+   i) Einfache (elementare) Variablen (int n;)
+   ii) Felder
+   iii) Strukturen
+
+-- Ein C-Programm wird typischerweise auf mehrere C-Dateien verteilt.
+
+   Best Practice (Empfehlung):  Eine Datei bekommt den Namen "Program.c" / "Main.c"
+
+   Hierin sollte die main-Funktion sein.
+
+   Andere Funktionen, die in anderen Dateien stehen: Name und Schnittstelle 
+      müssen mit einer extern-Deklaration bekannt gemacht werden.
+
+      i) Diese kann in der Datei / in den Dateien stehen, wo die Funktion benötigt wird.
+
+      ii) Besser: Mit einer separaten Datei:  "Header"-Datei
+
+      Achtung:  "Header"-Dateien sind nicht isoliert übersetzbar.
+
+      Übersetzungsarchitektur: Viele C-Dateien (Compiler) 
+                               ==> viele .OBJ Dateien
+                               ==> (Linker) EINEM .EXE File
+
+-- Ein weiteres Strukturierungsmittel:
+            Funktion nicht "überall" verfügbar machen,
+            sondern ( zum Schutz der Funktion // Modularisierung ) nur in EINER Datei verwendet werden können.
+
+            Hilfsfunktion.
+
+            Wie: Schlüsselwort 'static'
+
+// =====================================================================
+
+Strukturierung der Daten
+
+A) Globale Daten:
+
+Sind im gesamten C-Programm verfügbar // lesend und schreibend
+während der gesamten Laufzeit des Programms.
+
+Ginge: Eine Einschränkung auf EINE Datei:  static 
+
+B) Lokale Daten:
+
+Werden erst bei Aufruf des Unterprogramms angelegt (auf dem Stack)
+und bei Verlassen wieder abgeräumt.
+
+Zweck: Eigentlich nur für Zwischenergebnisse.
+
+       Man kann da keine Werte aufheben ............ für temporäre Berechnungen.
+       Nichts zum Aufheben
+
+C) Dynamische Daten:
+
+Werden bei BEDARF erzeugt ... und DANACH wieder freigegeben.
+
+15.25
+-----
