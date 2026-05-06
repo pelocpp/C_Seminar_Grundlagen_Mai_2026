@@ -1412,10 +1412,11 @@ Starten:  Betriebssystem  :  CreateProcess
 
 ===========================================
 
-Dynamischen Daten:   HEAP    //  Memory leak
+Dynamischen Daten:   HEAP SEGMENT    //  Memory leak
 
-Globalen Daten:
+Globalen Daten:      DATA SEGMENT
 
+Lokale Variablen:    STACK SEGMENT
 
 ===========================================
 
