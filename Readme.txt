@@ -52,12 +52,12 @@ Agenda Dienstag:
 Agenda Mittwoch:
 ----------------
 
-== Besprechung Musterlösung
-
 == Genereller Aufbau
    -- main / Unterprogramm / Ablauf
    -- Daten / Strukturierung
    -- Header-Files
+
+== Besprechung Musterlösung
 
 == Zeiger und Pointer
 
@@ -92,8 +92,6 @@ Agenda Freitag:
 
 == Aufgaben: Telefonbuch
 
-
-
 ===================================
 
 
@@ -113,6 +111,118 @@ Remote-IDE
 
 
 ===================================
+
+Genereller Aufbau eines C-Programms
+-----------------------------------
+
+In Bezug auf Funktionen:
+------------------------
+
+== Mehrere Dateien
+
+== In jeder Datei ein oder mehrere Funktionen
+
+== Genau eine Funktion (egal, in welcher Datei) muss 'main' heißen
+
+----------------
+
+== Fangen wir bei der Funktion 'main' an:
+
+   -- Diese 'main'-Funktion ruft (normalerweise) ein oder mehrere ANDERE Funktionen auf.
+
+   -- Die NAMEN dieser Funktionen müssen an dieser Stelle (in 'main') BEKANNT sein.
+
+      >> Sie stehen in DERSELBEN Datei weiter oben
+
+      >> Sie sind in ANDEREN Dateien:
+
+         a) Jetzt schreibt man eine sog. Header-Datei (.h),
+         die "den Namen der Funktion enthält" / die Schnittstelle der Funktion enthält
+
+         // global functions
+         extern void exercise_areaRectangle();
+         extern void exercise_areaCircle();
+
+         b) Diese Header-Datei ist mit #include zu inkludieren.
+
+
+
+===================================
+
+Genereller Aufbau eines C-Programms
+-----------------------------------
+
+In Bezug auf globale Daten:
+---------------------------
+
+== Diese werden in GENAU EINER Datei definiert / vereinbart:
+
+int g_counter = 0;   // Mit Vorbelegungswert // Lesbarkeit: Fängt mit g_ an
+
+== Diese können in ALLEN anderen Dateien verwendet werden.
+
+  -- In derselben Datei: Nix zu tun. (wenn sie "oben" vereinbart wird)
+
+  -- In anderen Dateien:
+
+     >> a) Der Name muss in einer Include-Datei stehen:
+
+        extern int g_counter;
+
+     >> b) Diese Header-Datei ist zu inkludieren
+
+
+   -- In anderen Dateien - auf die SCHNELLE:
+
+
+======================================================================
+
+Wie kann man globale Variablen schützen ??
+
+Sei es zB lesenden und schreibenden Zugriff trennen ??
+
+Vorgehensweise:
+
+a) Die Variable selbst wird NICHT global gemacht:   static 
+
+b) Wir schreiben Zugriffsfunktionen für diese Variable: getter / setter
+
+   Lesend und schreibend
+
+
+======================================================================
+
+Die 'main' Funktion gibt es in zwei Ausprägungen:
+
+A) Exakt - per Definition:
+
+int main(int argc, char* argv[])
+{
+    // ...
+
+    return 0;
+}
+
+
+B) Etwas kürzer, toleriert, aber eben nicht gemäß Sprachdefinition:
+
+void main()
+{
+   // ...
+}
+
+======================================================================
+
+Real-World Beispiel:
+
+Python:
+
+Wie lernt man eine Sprache:  Man muss einen Übersetzer / Interpreter schreiben können.
+
+// Compilerbau
+
+======================================================================
+
 
 Hello World:
 
@@ -970,3 +1080,33 @@ Zufallszahlen:
 Werden berechnet: Ohne Eingriff: Ist das immer diesselbe Zahlenfolge
 
 Mit Eingriff:    srand
+
+==========================================================================
+
+Begriff des Moduls in C:
+
+== Erst mal so nicht definiert.
+
+== Aber: Wie könnte man ein Modul in C nachahmen:
+
+   i) Alle Modul-INTERNEN Funktionalitäten (Funktionen und Daten) werden
+     in dem Modul versteckt.
+
+     Wie: static
+
+  ii) Was wird "exportiert"
+
+    - globale Variablen (KEIN static)
+
+    - setter / getter
+
+    - alle Funktionen, die ebenfalls NICHT static sind.
+
+==========================================================
+
+Pause
+
+Datentyp: Zeiger  
+
+10.50
+-----

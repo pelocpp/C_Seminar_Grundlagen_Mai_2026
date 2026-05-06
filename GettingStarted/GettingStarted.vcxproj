@@ -129,6 +129,7 @@
     <ClCompile Include="Aufgabe_03_Unterprogramme.c" />
     <ClCompile Include="Aufgabe_04_Array_Minimum_Maximum.c" />
     <ClCompile Include="GlobalData.c" />
+    <ClCompile Include="Hello.c" />
     <ClCompile Include="HelloWorld.c" />
     <ClCompile Include="LocalData.c" />
     <ClCompile Include="Program.c" />

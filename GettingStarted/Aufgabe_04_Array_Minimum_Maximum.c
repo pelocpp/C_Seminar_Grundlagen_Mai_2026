@@ -1,13 +1,16 @@
 
 // Präprozessor: Reine Textersetzung
 
+// Modul:
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 #define MaxZahlenUebung  10
 
-// globales Feld
+// globales Feld (nur in dieser Datei)
 static int g_einFeld[MaxZahlenUebung];
 
 static void exercise_Array_Ausgeben()
@@ -38,7 +41,8 @@ static void exercise_Array_Vorbelegen()
 
 static int exercise_Array_Minimum()
 {
-    // Kleinstes Element suchen
+    // Kleinstes Element suchen   [ 2, 3, 4, 5, 6, 99 ]
+    // int minimum = 100;           // 2
     int minimum = g_einFeld[0];
 
     for (int i = 1; i < MaxZahlenUebung; i++)
@@ -65,6 +69,9 @@ static int exercise_Array_Maximum()
 
     return maximum;
 }
+
+// Dies ist in diesem "Modul Übung zu Arrays" die einzige Funktion,
+// die exportiert wird.
 
 void exercise_Array()
 {

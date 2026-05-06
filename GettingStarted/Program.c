@@ -1,9 +1,6 @@
 // Vereinbarungen des Vertrauens
 // Vorwärts- / Extern-Deklarationen
 
-//extern void exercise_areaRectangle();
-//extern void exercise_areaCircle();
-
 #include <stdio.h>
 
 #include "MyFunctions.h"
@@ -11,9 +8,22 @@
 // Geht / Ginge
 // extern int g_value;
 
-int main()
+// extern int g_counter;
+
+int main(int argc, char* argv[])
 {
+    //extern int g_counter;
+
+    incrementSaveCounter();
+    incrementSaveCounter();
+    incrementSaveCounter();
+    incrementSaveCounter();
+
+    printf("Main: %d\n", getSaveCounter ());
+
     exercise_Array();
+
+  //  hello();
 
     return 0;
 }
