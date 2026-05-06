@@ -1187,3 +1187,177 @@ void exercise()
     printf("%d - %d\n", n, m); // 10, 5 !!!!!!!!!!!!!!!!!!!!!!!
 }
 
+// ==============================================================
+
+Üblicherweise:
+
+Call-by-Value
+Call-by-Reference
+
+// In C würde ich (Peter Loos) das etwas anders formulieren:
+
+a) Call-by-Value  // bei Wert <=> Kopie // Call-by-Copy
+
+b) Call-by-Reference: Hmmmmmmmmmm, weil in C gibt es KEINEN Datentyp Referenz 
+
+   Deshalb (Peter Loos): Call-by-Address
+
+Anmerkung: C++ gibt es Referenz - und natürlich auch Pointer, weil C in C++ enthalten ist.
+
+C++:  Parameterübergabe:
+
+i)   Call-by-Value / Copy
+ii)  Call-by-Reference
+iii) Call-by-Address / wie in C
+
+========================================================================
+
+Frage: Code vom Lieferanten
+
+int n = 123;
+
+int* ptr = &n;
+
+int* ptr = (int*) 0x1024;   // Falsch oder schlecht ist 
+                            // (int*): Datentypkonvertierung ==> Warning vermieden.
+
+Es gibt Situationen:
+
+i) Embedded Software
+ii) Treiber Software // Devive Drive: Netzwerkkarte
+iii) Firmware
+
+Verwaltet intern einenn HW-Puffer: 1024 bytes
+
+Doku: 0x1000 : dort ist ein Puffer
+
+char* buffer = (char*) 0x1000;   // hier liegt in der HW ein Pufferbereich.
+
+======================================================================
+
+Ziel: ===> Dynamische Speicherverwaltung
+
+Vorraussetzungen:  C Zeiger:  Basis ==> Kür
+
+Thema:     Zeigerarithmetik
+
+Rechnen mit Zeigern
+
+Wie ?????????
+
+a) "Eins zu einer Adresse zählen"
+
+Was ist eine Adresse: Ein Wert, der ein BYTE im Speicher anspricht !!!!!
+
+DESHALB:
+
+"Eins zu einer Adresse zählen": Der +1 wird in die ANZAHL Bytes umgerechnet,
+um damit beim nächsten möglichen Wert zu landen.
+
+short* ptr; // 2 Bytes
+
+ptr ++;   // 0x1024 ==> 0x1026
+
+
+
+Zeigerarithmetik:
+
+Besteht aus 2 Rechenarten:
+
+int* ptr;
+....
+
+i) ptr ++;    // Anzahl Bytes (hier: 4) dazuzählen
+   ptr --;    // Anzahl Bytes (hier: 4) abziehen
+
+ii) ptr = ptr + 5;   // Offset  // Anzahl Bytes pro Typ (hier: 4) multiplizieret mit Offeset (hier: 5)  dazuzählen
+    ptr = ptr - 5;   // Offset  // Anzahl Bytes pro Typ (hier: 4) multiplizieret mit Offeset (hier: 5)  abziehen
+
+====================================================================
+
+Frage:
+
+In Python kann man ein Feld belieger Länge erstellen:
+
+import numpy as np
+n = 10
+feld = np.zeros(n)  # Array mit 10 Nullen (Floats)
+
+Das geht auch in C !!!
+
+====================================================================
+
+Wozu Zeigerarithmetik: ===> Dynamische Speicherverwaltung
+
+Ein Ziel:
+
+C zwei Arten von Arrays:
+
+a) Feld statischer Länge:
+
+int lotto [6];    // Fixed Size !!!!!!!!!!!!!
+
+b)  Feld dynamischer Länge:
+
+malloc:   memory allocate  
+calloc
+
+int zahlen = 6;
+int* lotto = malloc(zahlen * sizeof(int));    // Dynamic Size
+
+lotto[2] = 33;  // Beispiel
+*(lotto + 2) = 33;  // Beispiel
+
+Ironischer Ausklang: Gibt es Arrays in C ????????????????????????????????
+
+NEIN, es gibt nur Anfangsadressen.
+
+
+malloc kennt  Speicher / kann Speicher reserviere / er kennt aber nur BYTES !!!
+
+Beispiel: 10 - int Werte ===>  40 Bytes
+
+=========================================================
+
+malloc: Steht das zur Verfügung ???
+
+Wo ist malloc überhaupt:  C-Bibliothek:  CRT  // C-Runtime Library
+
+Zu 98% ist die CRT - auch bei Embedded C Compilern - dabei.
+
+Ausnahme:
+
+Embedded C ohne Bibliothek:  Bare Metal C
+
+Bare Metal C bezeichnet die Programmierung von Mikrocontrollern oder Prozessoren
+in der Sprache C direkt auf der Hardware, ohne Betriebssystem (OS) oder Zwischenschichten (Middleware).
+Der Code steuert Hardwarekomponenten wie Register und Speicher direkt an, was maximale Leistung,
+volle Kontrolle und Echtzeitfähigkeit ermöglicht, aber tiefes Hardwarewissen erfordert
+
+RTOS OS Familien:
+
+a) Dann stehen als Alternative für malloc Funktionen des Betriebssystems zur Verfügung.
+b) Bare Metal C
+
+================================================================
+
+        *(feld + i) = 100 + i;
+00007FF6470A71CA  mov         eax,dword ptr [rbp+64h]             // Code Segement
+00007FF6470A71CD  add         eax,64h  
+00007FF6470A71D0  movsxd      rcx,dword ptr [rbp+64h]  
+00007FF6470A71D4  mov         rdx,qword ptr [feld]  
+00007FF6470A71D8  mov         dword ptr [rdx+rcx*4],eax  
+        // identisch
+        feld [i] = 100 + i;
+00007FF6470A71DB  mov         eax,dword ptr [rbp+64h]  
+00007FF6470A71DE  add         eax,64h  
+00007FF6470A71E1  movsxd      rcx,dword ptr [rbp+64h]  
+00007FF6470A71E5  mov         rdx,qword ptr [feld]  
+00007FF6470A71E9  mov         dword ptr [rdx+rcx*4],eax  
+
+
+===========================================
+
+3:25 + 20 = 3:45
+----------------
+

@@ -35,7 +35,7 @@ static void malDreiExEx(int* adrValue)
 }
 
 // Vergleich
-void test_zeiger()
+void test_zeiger_03_vergleich_direct_indirect()
 {
     int n = 123;
 
@@ -87,19 +87,32 @@ static void test_zeiger_01()
   //  printf("n=%d\n", n);
 }
 
-
-void tausche(/*...*/)
+static void test_zeiger_04()
 {
+    int n = 123;
+    int m = 124;
+
+    int* ptr = &n;   // 0x000000a0dd1cf404
+
+    // ptr = ptr + 1;   // ??????????????????  NICHT: 0x000000a0dd1cf404 SONDERN +4: 0x000000a0dd1cf408
+    // oder, kürzer:
+    // ptr++;
+    ptr = ptr + 2;
+
+    // wir bringen das wieder in Ordnung
+    // ptr --;
+    ptr = ptr - 2;
+
+    *ptr = 999;
+
+
+    //int* ptr1 = &n;
+    //int* ptr2 = &n;
+    //int* ptr3 = ptr1 + ptr2;   //  0x000000a0dd1cf404 + 0x000000a0dd1c9999  NEIN  NIE
+    //                           // '+': cannot add two pointers
 }
 
-void exercise()
+void demoZeiger()
 {
-    int n = 5;
-    int m = 10;
-
-    printf("%d - %d\n", n, m); // 5, 10
-
-    tausche(n, m);  // oder so ähnlich
-
-    printf("%d - %d\n", n, m); // 10, 5 !!!!!!!!!!!!!!!!!!!!!!!
+    test_zeiger_04();
 }

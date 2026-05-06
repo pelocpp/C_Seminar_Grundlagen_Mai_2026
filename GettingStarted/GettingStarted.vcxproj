@@ -128,6 +128,8 @@
     <ClCompile Include="Aufgabe_02_ZinsesZins.c" />
     <ClCompile Include="Aufgabe_03_Unterprogramme.c" />
     <ClCompile Include="Aufgabe_04_Array_Minimum_Maximum.c" />
+    <ClCompile Include="Aufgabe_05_Zeiger_Tausche.c" />
+    <ClCompile Include="Dynamic.c" />
     <ClCompile Include="GlobalData.c" />
     <ClCompile Include="Hello.c" />
     <ClCompile Include="HelloWorld.c" />
@@ -143,8 +145,8 @@
     <Image Include="..\01_Stack_Unterprogrammaufruf.png" />
     <Image Include="..\02_Stackframe.png" />
     <Image Include="..\03_Zeiger.png" />
-    <Image Include="..\Call_by_Address_05.png" />
-    <Image Include="..\Call_by_Copy_04.png" />
+    <Image Include="..\05_Call_by_Address.png" />
+    <Image Include="..\04_Call_by_Copy.png" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFunctions.h" />

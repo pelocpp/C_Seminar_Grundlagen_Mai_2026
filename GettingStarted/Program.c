@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 {
     //extern int g_counter;
 
-    test_zeiger();
+    demoDynamic();
     return;
 
     incrementSaveCounter();
