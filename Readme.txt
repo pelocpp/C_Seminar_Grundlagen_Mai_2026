@@ -72,6 +72,8 @@ Agenda Mittwoch:
 Agenda Donnerstag:
 ----------------
 
+== Übung DoubleCapital
+
 == Besprechung Musterlösung
 
 == Zeichenketten
@@ -80,6 +82,7 @@ Agenda Donnerstag:
 
 == Aufgaben:  Aufgabe zur Zeichenkettenverarbeitung mit dynamisch allokiertem Speicher
 
+== Zeichenketten
 
 ===================================
 
@@ -92,6 +95,7 @@ Agenda Freitag:
 
 == Aufgaben: Telefonbuch
 
+===================================
 ===================================
 
 

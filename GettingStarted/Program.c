@@ -20,8 +20,6 @@ int main(int argc, char* argv[])
 {
     //extern int g_counter;
 
-    bonbon();
-
     demoDynamic();
     return 0;
 
