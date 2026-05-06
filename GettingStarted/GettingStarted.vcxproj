@@ -134,6 +134,7 @@
     <ClCompile Include="LocalData.c" />
     <ClCompile Include="Program.c" />
     <ClCompile Include="Unterprogramme.c" />
+    <ClCompile Include="Zeiger.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />
@@ -141,6 +142,9 @@
   <ItemGroup>
     <Image Include="..\01_Stack_Unterprogrammaufruf.png" />
     <Image Include="..\02_Stackframe.png" />
+    <Image Include="..\03_Zeiger.png" />
+    <Image Include="..\Call_by_Address_05.png" />
+    <Image Include="..\Call_by_Copy_04.png" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFunctions.h" />

@@ -12,6 +12,8 @@ extern void demoArray();
 
 extern void exercise_Array();
 
+extern void test_zeiger();
+
 extern void func1();
 extern void func2();
 

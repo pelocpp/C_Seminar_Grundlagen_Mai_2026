@@ -48,6 +48,9 @@
     <ClCompile Include="Hello.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Zeiger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />
@@ -57,6 +60,15 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="..\02_Stackframe.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\03_Zeiger.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Call_by_Address_05.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Call_by_Copy_04.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

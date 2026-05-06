@@ -1104,9 +1104,64 @@ Begriff des Moduls in C:
 
 ==========================================================
 
-Pause
+Warum ist C so verbreitet ???
+Warum ist C auch heute noch so aktuell ???
 
-Datentyp: Zeiger  
+==> In C kann man sehr maschinennah arbeiten: Datentyp: Adressen.
 
-10.50
+"Es braucht vielleicht ein wenig, bis sich das setzt"
+
+==========================================================
+
+Zeiger / Adressen:
+
+Speicher kann über Adressen angesprochen werden.
+
+Zeiger: Whyyyyyyyyyyyyyyyyyyyyyyyy:  Kommt noch !!!
+
+int*:   Ist ein Datentyp für eine Adresse, an der eine int-Variable liegt.
+
+long*: ....
+
+Man wollte in C eine Adresse (0xC234234) mit einem Datentyp zusammenführen.
+
+Zeiger: Whyyyyyyyyyyyyyyyyyyyyyyyy:  Kommt noch !!!
+
+Zweites Beispiel:
+
+Parameter-Übergabe in C:
+------------------------
+
+Standard-Vorgehensweise:  Call-by-Copy   // Aufruf mit einer Kopie
+
+Zweite Vorgehensweise:    Call-by-Adress // Aufruf mit der Adresse einer Variablen
+
+Whyyyy: Erster Grund zur Einführung von Zeigern / Adress:
+
+Man kann mit deren Hilfe auf das Original einer Variablen zugreifen
+und nicht auf die Kopie einer Variablen.
+
+---
+A pro pos: Pascal:  ^    ist wie eine Adresse in C
+---
+
+    n = 124;     // direkte Wertzuweisung über den Namen der Variablen
+00007FF6F073682D  mov         dword ptr [n],7Ch  
+
+    // versus
+
+    *ptr = 124;  // indirekte Wertzuweisung über die Adresse der Variablen
+00007FF6F0736834  mov         rax,qword ptr [ptr]     // rax  : Adress-Register
+00007FF6F0736838  mov         dword ptr [rax],7Ch     // [] steht auf Maschinenebene für Indirekt
+
+________________________
+
+Frage: Beobachtung:
+
+== Habe ich eine Kopie
+== Habe ich Zugriff auf das Original
+
+
+13:35
 -----
+
