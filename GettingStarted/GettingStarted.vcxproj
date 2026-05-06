@@ -129,6 +129,7 @@
     <ClCompile Include="Aufgabe_03_Unterprogramme.c" />
     <ClCompile Include="Aufgabe_04_Array_Minimum_Maximum.c" />
     <ClCompile Include="Aufgabe_05_Zeiger_Tausche.c" />
+    <ClCompile Include="Aufgabe_06_Dynamic_Zinsen.c" />
     <ClCompile Include="Dynamic.c" />
     <ClCompile Include="GlobalData.c" />
     <ClCompile Include="Hello.c" />

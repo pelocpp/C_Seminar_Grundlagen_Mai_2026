@@ -1427,4 +1427,72 @@ Lokale Variablen:    STACK SEGMENT
 4717: 'bonbon': recursive on all control paths,
 function will cause runtime stack overflow  <============ 
 
-===========================================
+=========================================================
+=========================================================
+
+Aufgabe:
+
+Wir wenden uns noch einmal der Zinsrechnung zu:
+
+Dieses Mal wollen wir berechnen, wann sich ein Grundkapital
+bei fester Verzinsung und Zinsakkumulation verdoppelt hat.
+
+Beispiel:
+
+int doubleCapital(double capitalStock, double interestRate);
+
+Parameter: capitalStock: Hier wird das Grundkapital (Startkapital) übergeben 
+Parameter: interestRate: Hier wird ein fester Zinssatz übergeben.
+
+Rückgabewert: Anzahl der Jahre, die man benötigt.
+
+Weitere Vorgaben:
+
+== Die Funktion 'doubleCapital' benötigt intern, wieviel Jahre zur Verdopplung
+   des Kapitals benötigt werden.
+
+== Die Funktion 'doubleCapital' legt dann intern ein double-Feld der entsprechenden Länge an
+   und speichert in dem Feld die Kapitalentwicklung pro Jahr ab.
+
+== Die Funktion 'doubleCapital' gibt alle Werte auf der Konsole aus.
+
+== Das interne double-Feld wird nach der Ausgabe nicht mehr benötigt.
+
+Beispiel:
+
+void exercise_Dynamic_Zinsen()
+{
+    double myCapitalStock = 1000.0;
+    double myInterestRate = 4.0;
+
+    printf("CapitalStock: %.2f, CapitalStock: %.2f\n", myCapitalStock, myInterestRate);
+
+    int years = doubleCapital(myCapitalStock, myInterestRate);
+
+    printf("Needed %d years.\n", years);
+}
+
+Ausgabe:
+
+
+CapitalStock: 1000.00, CapitalStock: 4.00
+ 0. Year: 1040.00
+ 1. Year: 1081.60
+ 2. Year: 1124.86
+ 3. Year: 1169.86
+ 4. Year: 1216.65
+ 5. Year: 1265.32
+ 6. Year: 1315.93
+ 7. Year: 1368.57
+ 8. Year: 1423.31
+ 9. Year: 1480.24
+10. Year: 1539.45
+11. Year: 1601.03
+12. Year: 1665.07
+13. Year: 1731.68
+14. Year: 1800.94
+15. Year: 1872.98
+16. Year: 1947.90
+17. Year: 2025.82
+Needed 18 years.
+

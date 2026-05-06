@@ -10,17 +10,16 @@
 
 // extern int g_counter;
 
-
-void bonbon()
-{
-    bonbon();
-}
+//void bonbon()
+//{
+//    bonbon();
+//}
 
 int main(int argc, char* argv[])
 {
     //extern int g_counter;
 
-    demoDynamic();
+    exercise_Dynamic_Zinsen();
     return 0;
 
     incrementSaveCounter();
