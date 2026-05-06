@@ -87,3 +87,19 @@ static void test_zeiger_01()
   //  printf("n=%d\n", n);
 }
 
+
+void tausche(/*...*/)
+{
+}
+
+void exercise()
+{
+    int n = 5;
+    int m = 10;
+
+    printf("%d - %d\n", n, m); // 5, 10
+
+    tausche(n, m);  // oder so ähnlich
+
+    printf("%d - %d\n", n, m); // 10, 5 !!!!!!!!!!!!!!!!!!!!!!!
+}

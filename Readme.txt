@@ -1129,6 +1129,8 @@ Zeiger: Whyyyyyyyyyyyyyyyyyyyyyyyy:  Kommt noch !!!
 
 Zweites Beispiel:
 
+=================================================================
+
 Parameter-Übergabe in C:
 ------------------------
 
@@ -1161,7 +1163,27 @@ Frage: Beobachtung:
 == Habe ich eine Kopie
 == Habe ich Zugriff auf das Original
 
+=================================================================
+=================================================================
 
-13:35
------
+Aufgabe:
+
+Vertauschen der Werte zweier Variaben
+
+void tausche ( ... )
+{
+}
+
+
+void exercise()
+{
+    int n = 5;
+    int m = 10;
+
+    printf("%d - %d\n", n, m); // 5, 10
+
+    tausche (n, m);  // oder so ähnlich
+
+    printf("%d - %d\n", n, m); // 10, 5 !!!!!!!!!!!!!!!!!!!!!!!
+}
 
