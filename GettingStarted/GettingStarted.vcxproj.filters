@@ -77,6 +77,12 @@
     <Image Include="..\04_Call_by_Copy.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="..\06_DynamicArray.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\07_SpeicherBereiche.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFunctions.h">

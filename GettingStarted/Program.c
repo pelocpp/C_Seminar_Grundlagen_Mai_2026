@@ -10,12 +10,20 @@
 
 // extern int g_counter;
 
+
+void bonbon()
+{
+    bonbon();
+}
+
 int main(int argc, char* argv[])
 {
     //extern int g_counter;
 
+    bonbon();
+
     demoDynamic();
-    return;
+    return 0;
 
     incrementSaveCounter();
     incrementSaveCounter();

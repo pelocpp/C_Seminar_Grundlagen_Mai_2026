@@ -1302,6 +1302,32 @@ b)  Feld dynamischer Länge:
 malloc:   memory allocate  
 calloc
 
+size_t size ===> size bytes  !!!
+
+Rückgabetyp:
+
+void* malloc( size_t size );
+
+Was ist void*: Eine Adresse von nichts ????
+
+Mit malloc kann man viele int's, double's, float's etc. anlegen!
+
+===> Wie soll dann der Rückgabetyp definiert werden ???
+
+void*:  Das ist nur eine Hilfestellung / Zwischenlösung:
+
+void* ist nicht zum Arbeiten gedacht !!!
+
+
+Soll man den Rückgabewert von malloc überprüfen:   (Peter Loos // IMHO)
+
+== bei kleiner Argumenten von malloc (wenig Speicher):
+   Keine Überprüfung.
+
+== bei großen Werten:
+   Hier mit Überprüfung.
+
+
 int zahlen = 6;
 int* lotto = malloc(zahlen * sizeof(int));    // Dynamic Size
 
@@ -1316,6 +1342,14 @@ NEIN, es gibt nur Anfangsadressen.
 malloc kennt  Speicher / kann Speicher reserviere / er kennt aber nur BYTES !!!
 
 Beispiel: 10 - int Werte ===>  40 Bytes
+
+=========================================================
+
+ACHTUNG: !!!!!!!!!!!!!!!!!!!!!
+
+Zu JEDEM malloc gehört eine FREIGABE des allokierten Speichers:
+
+free
 
 =========================================================
 
@@ -1358,6 +1392,34 @@ b) Bare Metal C
 
 ===========================================
 
-3:25 + 20 = 3:45
-----------------
+Resumee
 
+===========================================
+
+Ein Programm wird "gestartet":
+
+Starten:  Betriebssystem  :  CreateProcess
+
+          Loader // Lader   ==>  .exe:   Meta-Daten
+
+                                         Wieviele glob. Variablen
+                                         Wie groß soll der Stack sein ?? Default ??
+                                         Wie groß ist (in Bytes) der Maschinencode?
+
+                        Lader: Allokiert Speicher:  CS, ES, SS, DS
+
+                                        IP   ==> Adresse der main-Funktion.
+
+===========================================
+
+Dynamischen Daten:   HEAP    //  Memory leak
+
+Globalen Daten:
+
+
+===========================================
+
+4717: 'bonbon': recursive on all control paths,
+function will cause runtime stack overflow  <============ 
+
+===========================================
