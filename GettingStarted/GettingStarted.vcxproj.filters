@@ -92,6 +92,15 @@
     <Image Include="..\07_SpeicherBereiche.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="..\08_LengthOfDynamicMemory.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\09_String_Am_Stack_Oder_ReadOnly.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\10_StructWithCallByValue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFunctions.h">
