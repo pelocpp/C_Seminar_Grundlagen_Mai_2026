@@ -46,7 +46,6 @@ Agenda Dienstag:
 
 == Arrays
 
-
 ===================================
 
 Agenda Mittwoch:
@@ -1552,11 +1551,72 @@ char s[] = "ABC";
 Eine Zeichenkette kann als Feld gesehen werden;
 Sie muss auch hier durch die terminierende Null beendet werden.
 
+=======================================================
+
+Es gibt 2 Definitionen von Zeichenketten:
+
+char* s = "ABC";   // Hier ist s nur ein ZEIGER, die Zeichen liegen WOANDERS (READ-ONLY SEGMENT)
+
+Wo liegt "ABC"
+
+NICHT am Stack
+NICHT am Heap  // malloc
+
+Antwort: In einem globalen Datensegment: READ-ONLY  // WRITABLE
+
+------------------------------------------------------
+
+char s[] = "ABC";   Hier liegen alle Daten am STACK
+
+------------------------------------------------------
+
+Möglichkeit, um Abstürze zu vermeiden:
+
+static void tueEtwasMitEinerZeichenkette( const char* s)
+
+Jetzt werden die Daten HINTER der Adresse als UNVERÄNDERBAR angesehen, weil const
+
+=========================================================
+
+Ooops, ich vergaß:
+
+Ich hätte da noch sagen sollen:
+
+Bei einem Feld steht der Name (kette2) für die ADRESSE / ANFANGSADRESSE:
+Da - bei Feldern - lässt man das & weg !!!!!!!!!!!!!!!!!!
 
 
+    int n = 123;
 
-13:30
------
+    char kette2[4] = "AEG";
 
+    tueEtwasMitEinerZeichenkette(kette2);
+
+    tueEtwasMitEinerZeichenkette(& n);
+
+=========================================================
+
+ TDD:      ===> Test Driven Development
+
+
+ =========================================================
+
+ wandleInGrossbuchstabenUm:
+
+ Ist das dein Ernst - muss ich das so machen:  ====> CRT -  C - Laufzeitbibliothek
+
+ strlen
+ islower
+ toupper
+
+  =========================================================
+
+ Online Compiler
+
+ Wandbox
+
+ https://wandbox.org/
+
+=========================================================
 
 
