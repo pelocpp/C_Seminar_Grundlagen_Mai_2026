@@ -28,11 +28,13 @@ extern void hello();
 extern void setSaveCounter(int newValue);
 extern void incrementSaveCounter();
 extern int  getSaveCounter();
+extern void alternateCounter();
 
 // =====================================================
 // global data
 
 extern int g_value;
 extern int g_counter;
+// extern int g_einInt;
 
 // =====================================================

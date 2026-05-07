@@ -3,8 +3,7 @@
 #include <stdio.h>   // printf
 #include <stdlib.h>  // rand, srand, 
 
-int g_einInt = 0;
-
+static int g_einInt = 0;    //  globale Variable, aber nur in DIESER DATEI
 
 static void testDynamic_01()
 {
@@ -43,11 +42,59 @@ static void testDynamic_01()
         printf("Wert an %d: %d\n", i, feld[i]);
     }
 
-  //  free(feld);
+    free(feld);
 }
+
+// Externe Routine // ext.  Bibliothek
+static int* testDynamic_02_Extern(  int* length  )
+{
+    int* feld = (int*) malloc(10  * sizeof(int));
+
+    feld[0] = 123;
+
+    *length = 10;
+
+    return feld;  
+}
+
+static void testDynamic_03_client()
+{
+    int len = 0;
+    int* adr = testDynamic_02_Extern(& len);
+
+    size_t versuch = sizeof(adr);
+
+    // mit den Daten gearbeitet
+    int zweiterVersuch;
+    zweiterVersuch = *adr;
+    zweiterVersuch = adr[0];
+
+    // jetzt benötige ich sie nicht mehr
+    free(adr);    // !!!!!!!!!!!!!
+}
+
+// Grammatik: Richtig oder falsch
+static int* testDynamic_03_Extern_WRONG()
+{
+    int einWert = 123;
+    return &einWert;     // ERROR C4172: returning address of local variable or temporary : einWert
+}
+
+static void testDynamic_03_client_WRONG()
+{
+    int* adr = testDynamic_03_Extern_WRONG();
+
+    printf("Dummy");  // ignorieren ...
+
+    int zweiterVersuch;
+    zweiterVersuch = *adr;
+    zweiterVersuch = adr[0];
+}
+
+
 
 
 void demoDynamic()
 {
-    testDynamic_01();
+    testDynamic_03_client_WRONG();
 }

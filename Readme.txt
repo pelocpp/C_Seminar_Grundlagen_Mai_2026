@@ -1418,9 +1418,15 @@ Starten:  Betriebssystem  :  CreateProcess
 
 Dynamischen Daten:   HEAP SEGMENT    //  Memory leak
 
-Globalen Daten:      DATA SEGMENT
+Globalen Daten:      DATA SEGMENT    // Größe ist in den Meta-Daten verfügbar.
 
-Lokale Variablen:    STACK SEGMENT
+Lokale Variablen:    STACK SEGMENT   // Ist nur für kleine Daten zu verwenden (Zwischenergebnisse)
+
+
+Dynamische Variablen:  malloc , free
+
+                Charme: Sie werden angelegt (malloc), wenn sie benötigt werden
+                        Sie werden freigegeben (free), wenn sie NICHT benötigt werden
 
 ===========================================
 

@@ -19,7 +19,8 @@ int main(int argc, char* argv[])
 {
     //extern int g_counter;
 
-    exercise_Dynamic_Zinsen();
+    demoDynamic();
+
     return 0;
 
     incrementSaveCounter();
