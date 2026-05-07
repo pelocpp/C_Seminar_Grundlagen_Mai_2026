@@ -63,6 +63,9 @@
     <ClCompile Include="Zeichen_Und_Zeichenketten.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Strukturen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />
@@ -92,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

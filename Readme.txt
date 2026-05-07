@@ -83,16 +83,29 @@ Agenda Donnerstag:
 
 == Zeichenketten
 
+== Strukturen
+
 ===================================
 
 Agenda Freitag:
 --------------
 
-== Strukturen
+== Literatur
+
+== Strukturen: Verfeinerung (typedef)
+
+== Kann man in C auch objekt-orientiert programmieren? (Strukturen)
 
 == Aufgaben: Geldbeutel
 
-== Aufgaben: Telefonbuch
+== Low-Level Programmierung in C
+     Operatoren zur Bitmanipulation: &, |, ^ und ~
+
+== enum, union
+
+== Aufgaben: All-In Komplex-Übung "Telefonbuch"
+
+== 16 Uhr // 17 Uhr // 16 Uhr: Für "alle" ... Fragen danach zur Verfügung stehe
 
 ===================================
 ===================================
@@ -1619,4 +1632,101 @@ Da - bei Feldern - lässt man das & weg !!!!!!!!!!!!!!!!!!
 
 =========================================================
 
+Strukturierung von Daten:
+
+a) elementare Datentypen.
+b) Felder: Ansammlung (dicht im Speicher liegend - ohne Lücken) von Daten desselben Typs
+c) Strukturen: Ansammlung von Daten unterschiedlichen Typs
+
+Beispiel: Uhrzeit
+
+Stunden,
+Minuten,
+Sekunden
+
+int hours;
+int minutes;
+int seconds;
+long milliseconds;
+
+int hours1;
+int minutes1;
+int seconds1;
+long milliseconds1;
+
+int hours2;
+int minutes2;
+int seconds2;
+long milliseconds2;
+
+SYNTAX:
+
+struct NameDerStruktur
+{
+};
+
+Wie sind ein einer Struktur die einzelnen Variablen im Speicher abgelegt ???
+
+Nicht DICHT hintereinander. Es gibt Lücken!
+
+Um einzelne Variablen EFFIZIENT (CPU) lesen / schreiben / adressieren zu können,
+müssen diese - aus Architekturgründen einer CPU / der Hardware - auf vielfachen ihrer Länge liegen:
+
+Alignment / Ausrichtung: Ausrichtung auf geeignete Adressen.
+
+Lücken:  Füllbytes //  Padding.
+
+Man kann durch Vertauschen der Reihenfolge Platz in einer Struktur sparen.
+
+Geht. Könnte die Lesbarkeit / Sinnhaftigkeit verloren gehen.
+
+Kann der Compiler das machen?
+
+==> Darf der Compiler an der Reihenfolge im Speicher nichts ändern: Nein.
+
+=============================================================================
+
+Wie wird ein Feldvariable in C übergeben?
+
+i) Ein Feldname steht für die ADRESSE:
+
+   ==> Wird hier eine Adresse übergeben
+
+ii) Wie wird eine Strukturvariable in C übergeben?
+
+   ==> Als Kopie - so wie elementare Variablen.
+
+Achtung: Ist es bei elem. Variablen zu einer Kopie gekommen: Nicht so schlimm.
+
+Wird eine Strukturvariable als Kopie übergeben: Das kostet unnütze Laufzeit.
+
+Ausnahme:  Ich will, dass der Client nicht auf meinem ORIGINAL arbeitet.
+
+======================================
+
+
+    now = end;  // Wertzuweisung von Strukturvariablen
+00007FF79D8D7F99  lea         rax,[now]  
+00007FF79D8D7F9D  lea         rcx,[end]  
+00007FF79D8D7FA1  mov         rdi,rax  
+00007FF79D8D7FA4  mov         rsi,rcx  
+00007FF79D8D7FA7  mov         ecx,0Ch     // 12  : time: 3 * int = 12 Bytes
+00007FF79D8D7FAC  rep movs    byte ptr [rdi],byte ptr [rsi]  
+
+Was ist  rep movs
+======================================
+
+"Library schützen"
+
+void foreignLibFunction (struct Data*);
+
+A)  void foreignLibFunction (const struct Data*);
+
+B)  void foreignLibFunction (struct Data);  // hier wird eine Kopie übergeben.
+
+------------
+
+In C gibt es für Strukturen DIREKT keinen Schutz der Variablen.
+ 
+========================================
 

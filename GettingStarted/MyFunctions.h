@@ -19,6 +19,7 @@ extern void demoArray();
 extern void demoZeiger();
 extern void demoDynamic();
 extern void demoCharsAndStrings();
+extern void demoStructs();
 
 extern void func1();
 extern void func2();
