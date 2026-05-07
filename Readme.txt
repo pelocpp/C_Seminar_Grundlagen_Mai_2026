@@ -1502,3 +1502,7 @@ CapitalStock: 1000.00, CapitalStock: 4.00
 17. Year: 2025.82
 Needed 18 years.
 
+Vorsicht:
+
+
+Intern:  double  capital [200];  // Neeeeeeee  // Pass-genaues Feature
