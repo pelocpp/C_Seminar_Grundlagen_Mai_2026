@@ -91,10 +91,24 @@ static void testDynamic_03_client_WRONG()
     zweiterVersuch = adr[0];
 }
 
+static void testDynamic_99_gimmicks()
+{
+    int* feld = (int*) malloc(100);  // 100 Bytes, 100 sollte durch 4 teilbar sein:  25 int's
+    if (feld == NULL) {
+        return;
+    }
 
+    feld[0] = 123;
 
+    int unknown1 = feld[-1];
+    int unknown2 = feld[-2];
+    int unknown3 = feld[-3];
+    int unknown4 = feld[-4];   //  undocumented  // Hersteller-abhängig
+
+    free(feld);
+}
 
 void demoDynamic()
 {
-    testDynamic_03_client_WRONG();
+    testDynamic_99_gimmicks();
 }

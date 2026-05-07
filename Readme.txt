@@ -1504,5 +1504,59 @@ Needed 18 years.
 
 Vorsicht:
 
-
 Intern:  double  capital [200];  // Neeeeeeee  // Pass-genaues Feature
+
+===========================================================================
+
+char: Ist ein Datentyp für EIN Zeichen
+
+Zwischen den beiden Datentypen char und int gibt es eine Beziehung:
+
+Das fällt nicht in die Schublade Typkonvertierung.
+
+
+Was ist ein Formfeed:
+
+Wagen:   Formfeed: eins nach unten
+
+Wagenrücklauf:
+
+Es gibt in der ASCII Tabelle zwischen 0 und 31 Sonderzeichen.
+
+
+=========================================================
+
+char* s = "1234567890";
+
+Wie ist eine solche Zeichenkette definiert ???
+
+2 Aussagen:
+
+A) Über ihr Anfangsadresse !
+
+B) Eine Zeichenkette muss am Ende ein Sonderzeichen haben, dass quasi für das Ende steht.
+   Dies ist die binäre Null: 0 oder '\0' oder terminierende Null
+
+char* s = "ABC";
+
+Wie lange ist diese Zeichenkette ??? 
+Wo steht die Länge der Zeichenkette ??? NIRGENDS !!!
+Man muss das Ende suchen und die Zeichen zählen.
+
+=======================================================
+
+Man kann eine Zeichenkette auch mit dem Begriff des Felds definieren:
+
+char s[] = "ABC";
+
+Eine Zeichenkette kann als Feld gesehen werden;
+Sie muss auch hier durch die terminierende Null beendet werden.
+
+
+
+
+13:30
+-----
+
+
+

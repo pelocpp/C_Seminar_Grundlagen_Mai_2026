@@ -137,6 +137,7 @@
     <ClCompile Include="LocalData.c" />
     <ClCompile Include="Program.c" />
     <ClCompile Include="Unterprogramme.c" />
+    <ClCompile Include="Zeichen_Und_Zeichenketten.c" />
     <ClCompile Include="Zeiger.c" />
   </ItemGroup>
   <ItemGroup>

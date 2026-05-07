@@ -60,6 +60,9 @@
     <ClCompile Include="Aufgabe_06_Dynamic_Zinsen.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Zeichen_Und_Zeichenketten.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />
