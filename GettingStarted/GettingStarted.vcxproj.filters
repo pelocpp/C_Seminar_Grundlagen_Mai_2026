@@ -72,6 +72,12 @@
     <ClCompile Include="WalletImpl.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LowLevelProgramming.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Enum_and_Union.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />

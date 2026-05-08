@@ -12,17 +12,16 @@ void exercise_Wallet()
     printWallet(&myWallet);
 
 
-    //toCents(& myWallet);  Geht nicht, weil static, "private"
+    addEurosToWallet(&myWallet, 20);
+    printWallet(&myWallet);
 
+    subEurosFromWallet(&myWallet, 60);
+    printWallet(&myWallet);
 
-    //addEurosToWallet(&myWallet, 20);
-    //printWallet(&myWallet);
+    Wallet myWifesWallet = { 0, 0 };
+    initWallet(&myWifesWallet, 100, 0);
 
-    //subEurosFromWallet(&myWallet, 60);
-    //printWallet(&myWallet);
+    compareWallets(&myWallet, &myWifesWallet);
 
-    //Wallet myWifesWallet = { 0, 0 };
-    //initWallet(&myWifesWallet, 100, 0);
-
-    //compareWallets(&myWallet, &myWifesWallet);
+    // toCents(&myWallet); //  Geht nicht, weil static, "private"
 }

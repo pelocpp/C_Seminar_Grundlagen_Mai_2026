@@ -132,10 +132,12 @@
     <ClCompile Include="Aufgabe_06_Dynamic_Zinsen.c" />
     <ClCompile Include="Aufgabe_07_Wallet.c" />
     <ClCompile Include="Dynamic.c" />
+    <ClCompile Include="Enum_and_Union.c" />
     <ClCompile Include="GlobalData.c" />
     <ClCompile Include="Hello.c" />
     <ClCompile Include="HelloWorld.c" />
     <ClCompile Include="LocalData.c" />
+    <ClCompile Include="LowLevelProgramming.c" />
     <ClCompile Include="Program.c" />
     <ClCompile Include="Strukturen.c" />
     <ClCompile Include="Unterprogramme.c" />

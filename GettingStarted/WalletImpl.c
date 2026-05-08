@@ -45,3 +45,29 @@ void printWallet(const Wallet* wallet)
     unsigned int total = toCents(wallet);
     printf(">>>> Wallet: %u Euros, %u Cents [Total: %u].\n", wallet->euros, wallet->cents, total);
 }
+
+void addEurosToWallet(Wallet* wallet, unsigned int euros)
+{
+    wallet->euros = wallet->euros + euros;
+}
+
+int subEurosFromWallet(Wallet* wallet, unsigned int euros)
+{
+    if (wallet->euros >= euros) {
+
+        wallet->euros = wallet->euros - euros;
+        return 1;
+    }
+
+    return 0;
+}
+
+int  compareWallets(const Wallet* leftWallet, const Wallet* rightwallet)
+{
+    if (leftWallet->euros == rightwallet->euros && leftWallet->cents == rightwallet->cents) {
+        return 0;
+    }
+    else {
+        return 1;
+    }
+}
