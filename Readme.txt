@@ -4,12 +4,21 @@ Seminar "C Grundlagen"
 
 Peter Loos
 
+peter.loos@gmx.de
+
+Unterlagen:
+
+https://github.com/pelocpp
+
+https://github.com/pelocpp/c_introduction
+
+===================================
+
 Pausen:   10.30 ............
 Mittag:   12.30
 
 Dienstag: 13.00 ...
 Abend:    17 Uhr
-
 
 35+ Jahre: C/C++, Java, C#, Back-to- the-Roots: C/C++
 
@@ -102,6 +111,8 @@ Agenda Freitag:
      Operatoren zur Bitmanipulation: &, |, ^ und ~
 
 == enum, union
+
+== Copilot
 
 == Aufgaben: All-In Komplex-Übung "Telefonbuch"
 
