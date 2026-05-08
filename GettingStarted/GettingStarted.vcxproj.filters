@@ -66,6 +66,12 @@
     <ClCompile Include="Strukturen.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Aufgabe_07_Wallet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WalletImpl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />
@@ -107,6 +113,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wallet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

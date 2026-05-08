@@ -104,6 +104,7 @@ Agenda Freitag:
 == Strukturen: Verfeinerung (typedef)
 
 == Kann man in C auch objekt-orientiert programmieren? (Strukturen)
+   == Schutz, Strukturierung, ...
 
 == Aufgaben: Geldbeutel
 
@@ -1740,4 +1741,97 @@ B)  void foreignLibFunction (struct Data);  // hier wird eine Kopie übergeben.
 In C gibt es für Strukturen DIREKT keinen Schutz der Variablen.
  
 ========================================
+
+Wertebereich von short:  2 Byte
+
+short:
+
+-32.768 bis 32.767
+
+unsigned short:
+
+0 .. 65.535
+
+
+========================================
+
+
+
+_Must_inspect_result_
+NTKERNELAPI
+NTSTATUS
+KeSetTargetProcessorDpcEx (
+    _Inout_ PKDPC Dpc,
+    _In_ PPROCESSOR_NUMBER ProcNumber
+    );
+
+typedef PPROCESSOR_NUMBER unsigned int;   // falsch geraten ....
+
+// unsigned short: 16 Bits ...
+typedef USHORT unsigned short;
+
+typedef struct _PROCESSOR_NUMBER {
+  USHORT Group;   // Die Nummer der Prozessorgruppe (0 bis n-1)
+  UCHAR  Number;  // Die relative Prozessornummer innerhalb dieser Gruppe
+  UCHAR  Reserved; // Reserviert für zukünftige Verwendung
+} PROCESSOR_NUMBER, *PPROCESSOR_NUMBER;
+
+
+========================================
+
+Strukturen in C:
+
+Diese ermöglichen es, objekt-orientierten Flavour in C zu ermöglichen. 
+
+Objekt-Orientierung für Arme
+
+Vorraussetzung:  Wir halten uns an selbst auferlegte Regeln // C unterstützt uns hierbei NICHT.
+
+// Klassen:
+
+// Methoden // Funktionen
+// Daten // Strukturen
+
+// Wie lassen sich die Methoden (Funktionen) mit einer Klasse (Struktur) verbinden ???
+
+   Funktionen, die als ERSTEN Parameter einen Zeiger auf die Struktur haben.
+
+// Initialisierung / Konstruktoren
+
+
+1. Regel: Wir greifen NICHT direkt auf die Variablen einer Struktur zu // SCHUTZ
+          Ausschließlich über Funktionen (Methoden)
+
+2. Regel: Wenn die Daten der Struktur nicht verändert werden, dann ist const zu verwenden: Read-Only Verhalten
+
+================================================================================
+
+1. Datei:  Header-Datei
+
+           Daten und Funktionen beschreiben.
+           Wallet.h
+
+
+2. Datei:  Realisierung der Funktionen
+           WalletImpl.c
+
+           Möglicherweise ergänzt um private (static) Hilfsfunktionen
+
+3. 4. 5.  Datei:
+
+        Anwendung:
+
+        a) Objekte (Strukturvariablen) anlegen (Wallet)
+        b) Auf diesen mit den Funktionen arbeiten 
+
+Kapselung: Recht gut imitierbar ...
+
+extern void addEurosToWallet   (      Wallet* wallet, unsigned int euros);   // Euros in den Geldbeutel legen
+extern int  subEurosFromWallet (      Wallet* wallet, unsigned int euros);   // Euros rausnehmen - WENN ES DENN GEHT - 0 = Fehler, 1 : Succes
+extern int  compareWallets     (const Wallet* leftWallet, const Wallet* rightwallet);  // Zero if leftWallet and rightwallet compare equal.
+
+Pause:
+
+10:50  
+-----
 

@@ -13,6 +13,7 @@ extern void exercise_areaCircle();
 extern void exercise_Array();
 extern void exercise_Adressen_tausche();
 extern void exercise_Dynamic_Zinsen();
+extern void exercise_Wallet();
 
 extern void demoGlobalData();
 extern void demoArray();

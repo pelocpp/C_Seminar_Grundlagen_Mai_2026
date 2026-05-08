@@ -130,6 +130,7 @@
     <ClCompile Include="Aufgabe_04_Array_Minimum_Maximum.c" />
     <ClCompile Include="Aufgabe_05_Zeiger_Tausche.c" />
     <ClCompile Include="Aufgabe_06_Dynamic_Zinsen.c" />
+    <ClCompile Include="Aufgabe_07_Wallet.c" />
     <ClCompile Include="Dynamic.c" />
     <ClCompile Include="GlobalData.c" />
     <ClCompile Include="Hello.c" />
@@ -138,6 +139,7 @@
     <ClCompile Include="Program.c" />
     <ClCompile Include="Strukturen.c" />
     <ClCompile Include="Unterprogramme.c" />
+    <ClCompile Include="WalletImpl.c" />
     <ClCompile Include="Zeichen_Und_Zeichenketten.c" />
     <ClCompile Include="Zeiger.c" />
   </ItemGroup>
@@ -159,6 +161,7 @@
   <ItemGroup>
     <ClInclude Include="MyFunctions.h" />
     <ClInclude Include="Time.h" />
+    <ClInclude Include="Wallet.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
