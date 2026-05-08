@@ -1879,5 +1879,152 @@ Copilot
 
 =======================================================
 
-13:30
------
+Strukturierung:  Daten
+
+== Felder
+== Struktur
+
+== Bitfelder
+== Unions
+== Aufzählungstypen
+
+=======================================================
+
+Was ist ein Bitfeld?
+
+Was ist eine Union?
+
+Wie eine Struktur, nur alle Variablen liegen im Speicher an DERSELBEN Stelle.
+
+union SecondUnionExample
+{
+    unsigned int  value;              // int = 4 Bytes
+    unsigned char bytes_of_value[4];  // sizeof (unsigned int)
+};
+
+=======================================================
+
+Der Aufzählungstyp (Pascal)
+
+// C vom ersten Tag
+
+#define LOW    1
+#define MEDIUM 2
+#define HIGH   3
+
+Das kann man anders machen:
+
+Vor allem dann, wenn diese Werte zusamengehören:
+
+enum level
+{
+    Low,
+    Medium,
+    High
+};
+
+Was ist die Intention: Einen Vergleich oder das Festhalten einer Information
+mit einem NAMEN und nicht mit einem Wert (0, 1, 2, ...)
+
+Symbolische Konstante
+
+
+=========================================================
+
+if, while, for (do-while)
+
+switch:
+
+Ist ähnlich zu einer if - else - Kaskade:
+
+Bei langen  if - else - Kaskaden eine Alternative (möglicherweise schneller)
+
+SYNTAX:
+
+
+    switch ( value  )               // value ist in der Regel eine Variable vom Typ  int, long, KEIN float, KEIN "ABC"
+                                    // keine Adresse wie int*
+                                    // value: int ==> 1, 20, 100, NICHT: 3.0
+    {
+    case konstante_1:
+        printf("Low Level\n");
+        break;   // jmp  : Sichtbarkeit des OpCodes jmp via break;
+    case konstante_2:
+        printf("Medium Level\n");
+        break;
+    case konstante_3:
+        printf("High Level\n");
+        break;
+    }
+
+    int value;   // den Wert 1  // konstante_1 ist 1
+
+    Was ist die Entscheidung:
+
+    == Wann if - else - Kaskade
+    == Wann switch
+
+    1.) So ab 4 bis 5 Verzeigungen wäre vielleicht switch besser
+
+    2.) Compiler / Linker / Maschinencode / Debugger / Optimizer (Optimierer):
+
+    Das ist eigentlich egal, weil:  (Release): Optimizer
+
+    3.) Lesbarkeit: 
+
+===========================================================
+
+Blockschachtelung
+
+Scope // Bereich
+
+Whyyyyyyyyyyyyyyyyy
+
+===========================================================
+
+Finale:
+------
+
+https://github.com/pelocpp/c_introduction/blob/master/C_Introduction/Exercises/Contacts/Exercises_Contacts.md
+
+
+-- Felder
+-- Strukturen
+-- Globale , lokale und dyn. Variablen
+-- Zeichenketten
+-- Schachtelung von Kontrollstrukturen
+
+
+Handys ==> Kontakte-App  
+
+Eine Art Kontakte-Verwaltung:   Name und Tel.Nr.
+
+== Hinzufügen
+== Ausgeben
+== Suchen
+
+Design:
+
+== Einen Kontakt
+== Alle Kontakte
+
+Struktur Contact
+
+Wie erkenne ich freie Plätze in der globalen Variablen   
+
+Contact g_contacts[MaxContacts]; ?
+
+Ad-Hoc: Viele Lösungen.
+
+Sauber: Da nehmen wir ein Flag.
+
+
+Zu den String-Funktionen:
+
+strcpy_s(Destination, Länge dieser Destination, Quelle);
+
+strcmp  (erste Zeichenkette, zweite Zeichenkette); 0 : Die Strings sind gleich.
+
+Ende :)
+
+======================================================================

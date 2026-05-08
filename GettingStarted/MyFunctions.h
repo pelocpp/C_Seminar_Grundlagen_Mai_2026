@@ -14,6 +14,8 @@ extern void exercise_Array();
 extern void exercise_Adressen_tausche();
 extern void exercise_Dynamic_Zinsen();
 extern void exercise_Wallet();
+extern void exercise_Contacts();
+
 
 extern void demoGlobalData();
 extern void demoArray();
@@ -22,6 +24,8 @@ extern void demoDynamic();
 extern void demoCharsAndStrings();
 extern void demoStructs();
 extern void demoLowLevelProgramming();
+extern void demoUnionsBitfieldsEnums();
+extern void demoScope();
 
 extern void func1();
 extern void func2();

@@ -18,8 +18,7 @@
 int main(int argc, char* argv[])
 {
     //extern int g_counter;
-
-    demoLowLevelProgramming();
+    exercise_Contacts();
 
     return 0;
 

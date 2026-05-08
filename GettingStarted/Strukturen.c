@@ -36,6 +36,9 @@ static void testStructTime01()
     end.hours = 17;
     end.minutes = 0;
     end.seconds = 0;
+
+    // Designated Initializer Syntax
+    struct Time jetzt = { .hours = 13, .minutes = 51, .seconds = 44 };
 }
 
 void printTime(const struct Time* t)   // read-only Mentalität

@@ -11,7 +11,7 @@
 /* define simple structure */
 struct Status1
 {
-    unsigned int widthValidated;
+    unsigned int widthValidated;  // true , false
     unsigned int heightValidated;
     unsigned int positionValidated;
 };
@@ -19,9 +19,11 @@ struct Status1
 /* define same simple structure with bit fields */
 struct Status2
 {
-    unsigned int widthValidated : 1;
+   // int vorher;
+    unsigned int widthValidated : 1;      // Anwendungsfall:  0 oder 1
     unsigned int heightValidated : 1;
-    unsigned int positionValidated : 4;
+    unsigned int positionValidated : 4;    // 4 Bits:  0 .. 15 // Anwendungsfall: 0 .. 15
+   // int nachher;
 };
 
 static void bitfields()
@@ -35,7 +37,7 @@ static void bitfields()
     s1.positionValidated = 7;
 
     struct Status2 s2 = { 0, 0, 0 };
-    s2.widthValidated = 1;
+    s2.widthValidated = 3;    // 1 Bit :   2 binär:   10   // 3:  11
     s2.heightValidated = 0;
     s2.positionValidated = 7;
 }
@@ -110,6 +112,7 @@ typedef union rgb RGB;
 
 static void unions_rgb()
 {
+    // Designated Initializer Syntax
     RGB red = { .color = 0x00FF0000 };
 
     printf("Red:     0x%0X\n", red.color);
@@ -121,6 +124,7 @@ static void unions_rgb()
 
     RGB magenta =
     {
+        // designated Initializer Syntax
         .bytes_of_color[3] = 0,
         .bytes_of_color[2] = 255,
         .bytes_of_color[1] = 0,
@@ -191,7 +195,9 @@ typedef union ipAddress IPAddress;
 
 static void unions_ip_adress()
 {
-    IPAddress localHost = {
+    IPAddress localHost =
+    {
+        // designated initializer syntax 
         .octets[0] = 1,
         .octets[1] = 0,
         .octets[2] = 0,
@@ -237,6 +243,30 @@ static void unions_ip_adress()
 #define MEDIUM 2
 #define HIGH   3
 
+static const int Higher = 3;
+
+static void problemsWithDefines()
+{
+    int status = MEDIUM;
+
+    int status2 = 2;;   // was ist das: Das zweite Semikolon ist eine leere Anweisung
+
+    if (status2 > 5) {
+        ;
+    }
+
+    if (status == HIGH) {
+        printf("bla\n");
+    }
+
+    if (status2 > 5) {
+        printf("bla\n");
+    }
+
+    printf("bla\n");
+}
+
+
 // better alternative
 
 enum level
@@ -272,12 +302,23 @@ static void enums()
         break;
     }
 
+    if (level == Low) {
+        printf("Low Level\n");
+    }
+    else if (level == Medium) {
+        printf("Medium Level\n");
+    }
+    else if (level == High) {
+        printf("High Level\n");
+    }
+    
+
     printf("Level: %d\n", level);
 }
 
 // =======================================================================
 
-void mainUnionsBitfieldsEnums()
+void demoUnionsBitfieldsEnums()
 {
     bitfields();
     unions();

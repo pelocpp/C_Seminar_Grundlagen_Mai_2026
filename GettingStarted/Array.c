@@ -26,6 +26,17 @@ void demoArray()
 
     int  lottoZahlen4[] = { 1, 2, 3, 4, 5, 6 };
 
+    int  lottoZahlen5[6] = { [3] = 20 };
+
+    int  lottoZahlen[7] = {
+        1,
+        2,
+        3,
+        4,
+        5,
+        6 
+    };
+
     // -------------------------------------------
     // Zugriff: Mit einem Index
     // Geht lesend und schreibend

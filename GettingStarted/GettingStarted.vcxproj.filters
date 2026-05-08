@@ -78,6 +78,12 @@
     <ClCompile Include="Enum_and_Union.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Scope.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Contacts.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Readme.txt" />
