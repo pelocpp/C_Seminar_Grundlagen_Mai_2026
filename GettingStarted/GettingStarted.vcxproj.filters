@@ -119,6 +119,9 @@
     <Image Include="..\10_StructWithCallByValue.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="..\11_Contacts.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFunctions.h">

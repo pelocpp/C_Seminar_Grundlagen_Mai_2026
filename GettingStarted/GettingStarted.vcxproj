@@ -161,6 +161,7 @@
     <Image Include="..\08_LengthOfDynamicMemory.png" />
     <Image Include="..\09_String_Am_Stack_Oder_ReadOnly.png" />
     <Image Include="..\10_StructWithCallByValue.png" />
+    <Image Include="..\11_Contacts.png" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyFunctions.h" />
