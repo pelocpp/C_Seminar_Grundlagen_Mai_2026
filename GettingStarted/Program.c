@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 {
     //extern int g_counter;
 
-    exercise_Wallet();
+    demoLowLevelProgramming();
 
     return 0;
 

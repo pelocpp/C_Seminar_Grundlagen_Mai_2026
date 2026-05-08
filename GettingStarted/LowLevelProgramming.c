@@ -30,6 +30,13 @@ static void low_level_01_bitwise_and()
 {
     unsigned short word1 = 0b1011'0011;
     unsigned short word2 = 0b1100'1101;
+
+    //                       1000'0001
+
+    // Achtung:
+    // &    Bitweises Und
+    // &&   Logisches Und
+
     unsigned short word = word1 & word2;
 
     printf("%04X\n", word1);
@@ -43,6 +50,9 @@ static void low_level_02_bitwise_or()
 {
     unsigned short word1 = 0b1011'0011;
     unsigned short word2 = 0b1000'1101;
+
+    //                       1011'1111 
+
     unsigned short word = word1 | word2;
 
     printf("%04X\n", word1);
@@ -79,7 +89,10 @@ static void low_level_04_bitwise_negate()
 static void low_level_05_left_shift()
 {
     unsigned char byte = 0b0010'0011;
-    unsigned char byteShifted = byte << 1;
+
+    //                   0100'0110
+
+    unsigned char byteShifted = byte << 1;  // das geschobene Byte  / die 1 steht für "um EIN Bit schieben"
 
     printf("%04X << %d = %04X\n", byte, 1, byteShifted);
     printf("\n");
@@ -90,6 +103,8 @@ static void low_level_06_right_shift_unsigned()
     unsigned char byte = 0b1010'0011;
     unsigned char byteShifted = byte >> 1;
 
+    //            0101'0001
+
     printf("%04X >> %d = %04X\n", byte, 1, byteShifted);
     printf("\n");
 }
@@ -99,11 +114,15 @@ static void low_level_07_right_shift_signed()
     signed char byte = 0b0010'0011;
     signed char byteShifted = byte >> 2;
 
+    //                  0000'1000
+
     printf("%4d >> %d = %4d\n", byte, 2, byteShifted);
     printf("\n");
 
     byte = -0b1000'0000;
     byteShifted = byte >> 3;
+
+    //             1111'0000
 
     printf("%4d >> %d = %4d\n", byte, 3, byteShifted);
     printf("\n");
@@ -200,7 +219,7 @@ void low_level_09_signed_vs_unsigned_shift()
 
 // ===========================================================================
 
-void mainLowLevelProgramming()
+void demoLowLevelProgramming()
 {
     low_level_01_bitwise_and();
     low_level_02_bitwise_or();

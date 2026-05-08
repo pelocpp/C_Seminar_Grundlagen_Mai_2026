@@ -1829,3 +1829,55 @@ Kapselung: Recht gut imitierbar ...
 extern void addEurosToWallet   (      Wallet* wallet, unsigned int euros);   // Euros in den Geldbeutel legen
 extern int  subEurosFromWallet (      Wallet* wallet, unsigned int euros);   // Euros rausnehmen - WENN ES DENN GEHT - 0 = Fehler, 1 : Succes
 extern int  compareWallets     (const Wallet* leftWallet, const Wallet* rightwallet);  // Zero if leftWallet and rightwallet compare equal.
+
+Wallet:
+
+A) Ich wollte eine Übung zu Strkturen.
+
+B) Ich wollte eine anschauliche, einfache Übung haben.
+
+===> addEurosAndCents (5,  300);  
+
+Wie würde man am BESTEN eine solche Klasse Wallet realisieren: Produkt SW
+
+struct wallet
+{
+    // Euros
+    unsigned int euros; // euros
+    unsigned int cents; // Cents
+};
+
+So nicht ........
+
+BESSER:
+
+struct wallet
+{
+    unsigned int totalCents;
+};
+
+Arghhhhh: Jetzt habe ich eine Struktur mit EINER Variablen ?!?!
+
+
+
+
+
+=============================================================================
+
+== Low-Level Programmierung in C
+     Operatoren zur Bitmanipulation: &, |, ^ und ~
+
+
+4 Operatoren: Bitmanipulation: &, |, ^ und ~
+
+=============================================================================
+
+Reverse Engineering
+-------------------
+
+Copilot
+
+=======================================================
+
+13:30
+-----

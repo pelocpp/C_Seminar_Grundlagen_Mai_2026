@@ -1,4 +1,6 @@
 
+#include <stdio.h>
+
 #include "Wallet.h"
 
 // Anwendung
@@ -11,6 +13,9 @@ void exercise_Wallet()
     initWallet(&myWallet, 50, 70);   // HIER HABE ICH  KONTROLLE
     printWallet(&myWallet);
 
+    printWallet(NULL);
+    Wallet* walletPtr = NULL;
+    printWallet(walletPtr);
 
     addEurosToWallet(&myWallet, 20);
     printWallet(&myWallet);
